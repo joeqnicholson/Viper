@@ -1,0 +1,24 @@
+# Ignore these folders
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+
+# Ignore Unreal Engine auto-generated files
+*.sln
+*.suo
+*.xcodeproj
+*.xcworkspace
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+*.log
+*.pdb
+
+# Ignore macOS files
+.DS_Store
+
+# Ignore build files
+*.pdb
+*.obj
