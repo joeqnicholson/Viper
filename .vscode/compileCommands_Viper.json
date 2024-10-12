@@ -1,5 +1,69 @@
 [
 	{
+		"file": "C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\Source\\Viper\\Hero.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\.vscode\\compileCommands_Viper\\Viper.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\Source\\Viper\\Hero.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\.vscode\\compileCommands_Viper\\Viper.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\Source\\Viper\\HeroAirborneState.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\.vscode\\compileCommands_Viper\\Viper.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\Source\\Viper\\HeroAirborneState.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\.vscode\\compileCommands_Viper\\Viper.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\Source\\Viper\\HeroGroundedState.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\.vscode\\compileCommands_Viper\\Viper.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\Source\\Viper\\HeroGroundedState.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\.vscode\\compileCommands_Viper\\Viper.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\Source\\Viper\\IState.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\.vscode\\compileCommands_Viper\\Viper.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\Source\\Viper\\IState.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\.vscode\\compileCommands_Viper\\Viper.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
 		"file": "C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\Source\\Viper\\KCC.cpp",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
@@ -9,6 +73,54 @@
 	},
 	{
 		"file": "C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\Source\\Viper\\KCC.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\.vscode\\compileCommands_Viper\\Viper.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\Source\\Viper\\KCCMovementComponent.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\.vscode\\compileCommands_Viper\\Viper.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\Source\\Viper\\KCCMovementComponent.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\.vscode\\compileCommands_Viper\\Viper.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\Source\\Viper\\Mathf.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\.vscode\\compileCommands_Viper\\Viper.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\Source\\Viper\\Mathf.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\.vscode\\compileCommands_Viper\\Viper.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\Source\\Viper\\StateMachine.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
+			"@C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\.vscode\\compileCommands_Viper\\Viper.1.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\Source\\Viper\\StateMachine.h",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe",
 			"@C:\\Users\\Slim7\\Documents\\Unreal Projects\\Viper\\.vscode\\compileCommands_Viper\\Viper.1.rsp"

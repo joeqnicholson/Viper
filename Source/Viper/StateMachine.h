@@ -17,6 +17,8 @@ public:
     // Updates the current state
     void Update(float DeltaTime);
 
+    IState* GetCurrentState() const;
+
 private:
     IState* CurrentState;
 };

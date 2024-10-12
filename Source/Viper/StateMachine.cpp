@@ -36,3 +36,8 @@ void StateMachine::Update(float DeltaTime)
         CurrentState->Update(DeltaTime);
     }
 }
+
+IState* StateMachine::GetCurrentState() const
+{
+    return CurrentState;
+}
