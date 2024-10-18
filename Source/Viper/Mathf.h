@@ -13,7 +13,11 @@ class VIPER_API Mathf
 public:
 	Mathf()=delete;
 	~Mathf()=delete;
-	static float MoveTowards(float current, float target, float maxDelta);
+	static float Approach(float current, float target, float maxDelta);
+	static FVector MoveTowards(const FVector& current, const FVector& target, float maxDelta);
 	static float SignedAngle(const FVector& A, const FVector& B, const FVector& UpVector);
-	static FRotator LocalInput(FVector Input, const UCameraComponent* Camera);
+	static float Angle(const FVector& A, const FVector& B);
+	static FVector LocalInput(FVector Input, const UCameraComponent* Camera);
+	static FRotator LocalInputRotation(FVector Input, const UCameraComponent* Camera);
+	static float OneDivided(float t);
 };

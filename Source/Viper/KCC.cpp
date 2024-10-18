@@ -39,7 +39,7 @@ void AKCC::Tick( float DeltaTime )
     Super::Tick( DeltaTime );
 }
 
-UPawnMovementComponent* AKCC::GetMovementComponent() const
+UKCCMovementComponent* AKCC::GetKCCMovementComponent() const
 {
     return MovementComponent;
 }
@@ -60,5 +60,5 @@ void AKCC::Rotate(FRotator CurrentRotation)
 bool AKCC::IsGrounded() const
 {
     // Ensure MovementComponent is valid, then return its bGrounded value
-    return MovementComponent ? MovementComponent->bGrounded : false;
+    return MovementComponent ? MovementComponent->IsGrounded() : false;
 }

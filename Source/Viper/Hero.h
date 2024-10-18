@@ -7,9 +7,10 @@
 #include "StateMachine.h"
 #include "Hero.generated.h"
 
-class IState;
+class UState;
 class HeroAirborneState;
 class HeroGroundedState;
+class AHeroController;
 
 UCLASS()
 class VIPER_API AHero : public AKCC
@@ -26,8 +27,8 @@ public:
     void AirborneMovement(float DeltaTime);
     void AirborneRotation(float DeltaTime);
 	void HandleInput();
-	void ReceiveInputY(float YValue);
-	void ReceiveInputX(float XValue);
+    void OnGroundHit();
+    void Jump();
 
     // Gravity and movement-related properties exposed to the editor
     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Movement")
@@ -41,13 +42,11 @@ public:
     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Movement")
     float Deceleration;
     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Movement")
-    float JumpHeight;
-    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Movement")
     float GravityUp;
     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Movement")
     float GravityDown;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
-	FVector MoveInput;
+    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Movement")
+    float AirAcceleration;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actives")
     float gravity;
@@ -55,17 +54,25 @@ public:
     float speed;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actives")
     float turnSpeed;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actives")
+    float verticalMoveSpeed;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Actives")
+    float currentJumpSpeed;
 
-
-    StateMachine* GetStateMachine() const;
+    UStateMachine* GetStateMachine() const;
 	FVector CurrentVelocity;
 	FRotator CurrentRotation;
-
 	FRotator rotationInput;
 	UCameraComponent* Camera;
 
-    IState* GetAirborneState() const { return AirborneState; }
-    IState* GetGroundedState() const { return GroundedState; }
+    float deltaTime = 0;
+    const float NormalJumpSpeedMin = 17.0f;
+    const float NormalJumpSpeedMax = 19.5f;
+    const float NormalJumpSpeedGravity = 1.5f;
+    const float NormalVarJumpTimer = 0.167f;
+
+    UState* GetAirborneState() const { return AirborneState; }
+    UState* GetGroundedState() const { return GroundedState; }
 
 protected:
     // Called when the game starts or when spawned
@@ -81,9 +88,14 @@ public:
 private:
 
     // State machine and states
-    StateMachine* HeroStateMachine;
-    IState* AirborneState;
-    IState* GroundedState;
+    UPROPERTY();
+    UStateMachine* HeroStateMachine;
+    UPROPERTY();
+    UState* AirborneState;
+    UPROPERTY();
+    UState* GroundedState;
+    UPROPERTY();
+    AHeroController* HeroController;
     
     void InitializeStateMachine();
 

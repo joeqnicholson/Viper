@@ -1,24 +1,26 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "StateMachine.generated.h"
 
 // Forward declaration of the base state interface
-class IState;
+class UState;
 
-class VIPER_API StateMachine
+UCLASS()
+class VIPER_API UStateMachine : public UObject
 {
+    GENERATED_BODY()
+
 public:
-    StateMachine();
-    ~StateMachine();
+    UStateMachine();
 
-    // Sets a new state and handles transition
-    void SetState(IState* NewState);
-
-    // Updates the current state
+    void SetState(UState* NewState);
     void Update(float DeltaTime);
-
-    IState* GetCurrentState() const;
+    UState* GetCurrentState() const;
+    float StateTimer;
+    float* GetStateTime();
 
 private:
-    IState* CurrentState;
+    TWeakObjectPtr<UState> CurrentState; // Use TWeakObjectPtr for safe referencing
 };

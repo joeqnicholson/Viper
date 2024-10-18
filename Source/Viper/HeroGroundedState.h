@@ -1,22 +1,29 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "IState.h"
+#include "UState.h"
+#include "HeroGroundedState.generated.h"
 
 // Forward declaration of the Hero class
 class AHero;
 
-class VIPER_API HeroGroundedState : public IState
+UCLASS()
+class VIPER_API UHeroGroundedState : public UState
 {
-public:
-    // Constructor that takes a pointer to the Hero character
-    HeroGroundedState(AHero* InHero);
+    GENERATED_BODY()
 
-    // Implement the IState interface methods
+public:
+    // Default constructor
+    UHeroGroundedState();
+
+    // Custom initialization function
+    void Initialize(AHero* Hero) override;
+
+    // Implement the UState interface methods
     virtual void Enter() override;
     virtual void Exit() override;
     virtual void Update(float DeltaTime) override;
 
 private:
-    AHero* H;  // Shortened variable name for Hero
+    AHero* H;  // Pointer to the Hero character
 };

@@ -1,12 +1,25 @@
 #include "HeroAirborneState.h"
 #include "Hero.h"
+#include "Engine/Engine.h"
 
-HeroAirborneState::HeroAirborneState(AHero* InHero)
-    : H(InHero)
+
+UHeroAirborneState::UHeroAirborneState()
+    : H(nullptr) // Initialize H to nullptr
 {
+    Name = TEXT("Airborne");
 }
 
-void HeroAirborneState::Enter()
+void UHeroAirborneState::Initialize(AHero* Hero)
+{
+    H = Hero; // Initialize H with the passed pointer
+    // Debug message to confirm initialization
+    if (H)
+    {
+        UE_LOG(LogTemp, Log, TEXT("UHeroAirborneState initialized with Hero: %s"), *H->GetName());
+    }
+}
+
+void UHeroAirborneState::Enter()
 {
     if (H)
     {
@@ -15,7 +28,7 @@ void HeroAirborneState::Enter()
     }
 }
 
-void HeroAirborneState::Exit()
+void UHeroAirborneState::Exit()
 {
     if (H)
     {
@@ -24,17 +37,24 @@ void HeroAirborneState::Exit()
     }
 }
 
-void HeroAirborneState::Update(float DeltaTime)
+void UHeroAirborneState::Update(float DeltaTime)
 {
+
     if (H)
     {
-
         // Call centralized methods in Hero for airborne mechanics
         H->HandleGravity(DeltaTime);
         H->AirborneMovement(DeltaTime);
 
+        if (GEngine)
+        {
+            float stateTime = *H->GetStateMachine()->GetStateTime();
+            FString message = FString::Printf(TEXT("Updating Airborne State. State Time: %f"), stateTime);
+            GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, message);
+        }
+
         // Check if the Hero has landed and transition back to the GroundedState
-        if (H->IsGrounded())
+        if (H->IsGrounded() && *H->GetStateMachine()->GetStateTime() > 0.05f)
         {
             H->GetStateMachine()->SetState(H->GetGroundedState());
         }

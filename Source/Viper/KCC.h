@@ -30,7 +30,7 @@ public:
     UPROPERTY(EditInstanceOnly, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 	class UCapsuleComponent* CapsuleComponent;
 
-    virtual UPawnMovementComponent* GetMovementComponent() const override;
+    UKCCMovementComponent* GetKCCMovementComponent() const;
 
     UFUNCTION(BlueprintCallable, Category = "Movement")
     void Move(FVector CurrentVelocity);

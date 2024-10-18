@@ -1,43 +1,47 @@
 #include "StateMachine.h"
-#include "IState.h"
+#include "UState.h"
 
-StateMachine::StateMachine()
-    : CurrentState(nullptr)
+UStateMachine::UStateMachine()
+    : CurrentState(nullptr) // Initialize CurrentState to nullptr
 {
 }
 
-StateMachine::~StateMachine()
+void UStateMachine::SetState(UState* NewState)
 {
-    if (CurrentState)
-    {
-        CurrentState->Exit();
-    }
-}
+    StateTimer = 0;
 
-void StateMachine::SetState(IState* NewState)
-{
-    if (CurrentState)
+    FString message = FString::Printf(TEXT("SetState"));
+    GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, message);
+
+
+    if (CurrentState.IsValid())
     {
         CurrentState->Exit();
     }
 
     CurrentState = NewState;
 
-    if (CurrentState)
+    if (CurrentState.IsValid())
     {
         CurrentState->Enter();
     }
 }
 
-void StateMachine::Update(float DeltaTime)
+void UStateMachine::Update(float DeltaTime)
 {
-    if (CurrentState)
+    if (CurrentState.IsValid())
     {
+        StateTimer += DeltaTime;
         CurrentState->Update(DeltaTime);
     }
 }
 
-IState* StateMachine::GetCurrentState() const
+float* UStateMachine::GetStateTime()
 {
-    return CurrentState;
+    return &StateTimer;
+}
+
+UState* UStateMachine::GetCurrentState() const
+{
+    return CurrentState.Get(); // Use Get() to retrieve the raw pointer
 }
